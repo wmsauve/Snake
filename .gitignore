@@ -1,3 +1,13 @@
+# Visual Studio
+*.vs
+
+# cmake stuff
+CMakeCache.txt
+CMakeFiles/
+
+# build folder
+build/
+
 # Prerequisites
 *.d
 
