@@ -4,14 +4,9 @@ project(Snake)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-include(FetchContent)
-FetchContent_Declare(SFML
-    GIT_REPOSITORY https://github.com/SFML/SFML.git
-    GIT_TAG 3.0.2
-    GIT_SHALLOW ON
-    EXCLUDE_FROM_ALL
-    SYSTEM)
-FetchContent_MakeAvailable(SFML)
+set(SFML_ROOT "${CMAKE_SOURCE_DIR}/external/SFML-3.0.2")
+set(SFML_DIR "${SFML_ROOT}/lib/cmake/SFML")
+find_package(SFML 3 REQUIRED COMPONENTS Graphics Audio Window System Network)
 
 add_subdirectory(App)
 add_subdirectory(Core)
