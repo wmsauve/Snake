@@ -17,3 +17,9 @@ add_custom_command(TARGET Snake POST_BUILD
         "${SFML_ROOT}/bin"
         "$<TARGET_FILE_DIR:Snake>"
 )
+
+add_custom_command(TARGET Snake POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${SFGUI_ROOT}/bin"
+        "$<TARGET_FILE_DIR:Snake>"
+)

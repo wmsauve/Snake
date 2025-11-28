@@ -11,3 +11,9 @@ target_include_directories(UI
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/Private
 )
+
+target_link_libraries(UI
+    PUBLIC
+        SFML::Graphics
+        SFGUI
+)
